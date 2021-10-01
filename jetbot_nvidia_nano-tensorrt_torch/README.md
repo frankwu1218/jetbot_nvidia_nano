@@ -13,9 +13,21 @@ https://www.balena.io/etcher/
 
 
 ### setup ubuntu and wifi after you load in sd card
-setup username as jetbot, system as jetbot, password as jetbot (or something else)
-Find out the ip address
-remote in using ssh jetbot@ipaddress
+setup username as jetbot, system as jetbot, password as jetbot (or something else). 
+Find out the ip address. 
+remote in using ssh jetbot@ipaddress. 
+
+###### If: Errors were encountered while processing: nvidia-14t-bootloader when reflash the disk
+###### Use terminal to reset the disk $ sudo diskutil eraseDisk HFS+ NEWNAME /dev/disk2
+
+
+Step1: Complete the above. (It will take `50 mins` for the procedure, including `25 mins` for flashing the disk).    
+Step2: Log in the Jetson nano, connect with WIFI and turn on the terminal. Type $ ifconfig to find out the IP address.  
+Step3: Turn on the terminal of laptop which connects with the same WIFI and Type $ ssh jetbot@ip address.  
+###### If: Offending ECDSA key. Remove it. $ rm address of host...  
+Step4: Type the command belowed.(to jupyter lab)  
+
+
 
 ### Installl fan control github (make the fan running)
 ```
@@ -27,10 +39,14 @@ sudo ./install.sh
 ##
 ```
 sudo apt update && sudo apt upgrade -y
+(upgrade will take the longest time for `2 hours`)
 sudo usermod -aG i2c $USER
 sudo apt-get update
 sudo apt install python3-pip python3-pil -y
 ```
+###### If: Errors were encountered while processing: nvidia-l4t-bootloader E: Sub-process /usr/bin/dpkg returned an error code (1)
+###### $ sudo apt remove nvidia-l4t-bootloader
+
 
 ### torch
 ```
@@ -47,6 +63,7 @@ cd torchvision
 git checkout tags/v0.8.1
 export BUILD_VERSION=0.8.1
 sudo python3 setup.py install
+(python3 setup will take `25 mins`)
 ```
 
 ### install torch2trt
@@ -66,6 +83,7 @@ sudo python3 setup.py install
 sudo pip3 install packaging
 chmod +x jupyter.sh
 ./jupyter.sh 
+(./jupyter.sh will take `25 mins`)
 ```
 
 ###
