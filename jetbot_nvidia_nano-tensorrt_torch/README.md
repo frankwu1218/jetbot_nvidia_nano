@@ -88,8 +88,8 @@ reboot and check the I2C pi OLED.
 run simple.ipynb in jetbot folder in Jupyter Notebooks for testing.  
 run torchrt.ipynb to convert to TensorRT feeding sample data as input.  
 set up the camera on J5 of Jeston nano. 
-$ wget https://raw.githubusercontent.com/lbaitemple/jetbot_nvidia_nano/tensorrt_torch/simpleprocess.ipynb. 
-to download the code in the jetbot folder to and run the code to test the camera whether the camera is working while the picture is changing.  
+$ wget https://raw.githubusercontent.com/lbaitemple/jetbot_nvidia_nano/tensorrt_torch/simpleprocess.ipynb.  
+to download the code(simpleprocess.ipynb) in the jetbot folder to and run the code to test the camera whether the camera is working while the picture is changing.  
 
 First step has done.  
 
