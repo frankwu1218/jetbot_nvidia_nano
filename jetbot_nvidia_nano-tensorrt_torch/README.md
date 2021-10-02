@@ -19,14 +19,12 @@ remote in using ssh jetbot@ipaddress.
 
 ###### If: Errors were encountered while processing: nvidia-14t-bootloader when reflash the disk
 ###### Use terminal to reset the disk $ sudo diskutil eraseDisk HFS+ NEWNAME /dev/disk2
-
-
+### The time of the procedure depends on the SD device or hardware memory.
 Step1: Complete the above. (It will take `50 mins` for the procedure, including `25 mins` for flashing the disk).    
 Step2: Log in the Jetson nano, connect with WIFI and turn on the terminal. Type $ ifconfig to find out the IP address.  
 Step3: Turn on the terminal of laptop which connects with the same WIFI and Type $ ssh jetbot@ip address.  
 ###### If: Offending ECDSA key. Remove it. $ rm address of host...  
 Step4: Type the command belowed.(to jupyter lab)  
-
 
 
 ### Installl fan control github (make the fan running)
@@ -85,6 +83,19 @@ chmod +x jupyter.sh
 ./jupyter.sh 
 (./jupyter.sh will take `25 mins`)
 ```
+
+reboot and check the I2C pi OLED.  
+run simple.ipynb in jetbot folder in Jupyter Notebooks for testing.  
+run torchrt.ipynb to convert to TensorRT feeding sample data as input.  
+set up the camera on J5 of Jeston nano. 
+$ wget https://raw.githubusercontent.com/lbaitemple/jetbot_nvidia_nano/tensorrt_torch/simpleprocess.ipynb. 
+to download the code in the jetbot folder to and run the code to test the camera whether the camera is working while the picture is changing.  
+
+First step has done.  
+
+
+
+
 
 ###
 
