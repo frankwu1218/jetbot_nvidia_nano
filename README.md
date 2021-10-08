@@ -7,3 +7,9 @@ sudo rm /var/crash/*
 killall system-crash-notification
 ```
 
+##### moniter the usage of GPU, CPU.  
+Install jetson-stats.  
+```
+sudo -H pip install -U jetson-stats
+jtop
+```
