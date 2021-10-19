@@ -45,6 +45,11 @@ sudo apt install python3-pip python3-pil -y
 ###### If: Errors were encountered while processing: nvidia-l4t-bootloader E: Sub-process /usr/bin/dpkg returned an error code (1)
 ###### $ sudo apt remove nvidia-l4t-bootloader
 
+```
+git clone https://github.com/JetsonHacksNano/installSwapfile
+cd installSwapfile
+./installSwapfile
+```
 
 ### torch
 ```
